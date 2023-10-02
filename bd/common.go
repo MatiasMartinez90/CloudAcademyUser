@@ -43,7 +43,7 @@ func ConnStr(claves models.SecretRDSJson) string {
 	dbUser = claves.Username
 	authToken = claves.Password
 	dbEndpoint = claves.Host
-	dbName = "gambit"
+	dbName = "cloudacademy"
 	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?allowCleartextPasswords=true", dbUser, authToken, dbEndpoint, dbName) // Paso un parametro para que no de error la conexion a la db, y paso las credenciales de la db
 	fmt.Println(dsn)
 	return dsn
